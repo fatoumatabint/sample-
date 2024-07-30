@@ -1,5 +1,8 @@
-# directory 
+# Directory 
+
 setwd("/Users/binta/Desktop/fichiers excel stage /fichiers modifiés")
+
+# Installation des packages 
 
 install.packages("gridExtra")
 install.packages("ggthemes")
