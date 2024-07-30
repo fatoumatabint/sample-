@@ -1,3 +1,4 @@
+# directory 
 setwd("/Users/binta/Desktop/fichiers excel stage /fichiers modifiés")
 
 install.packages("gridExtra")
