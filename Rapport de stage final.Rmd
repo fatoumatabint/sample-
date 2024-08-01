@@ -1,11 +1,11 @@
 ---
-title: "Rapport de Stage"
+title: "Rapport de Stage sur l'Optimisation et la Correction des Scripts R pour le Commerce International Intra-zone"
 author: "DIALLO Fatoumata"
 date: "`r Sys.Date()`"
 output:
   pdf_document:
     toc: true
-    toc_depth: '6'
+    toc_depth: '2'
   html_document:
     toc: true
     toc_depth: 6
@@ -17,6 +17,14 @@ output:
     fig_height: 5
     code_folding: show
 ---
+
+\\newpage \\begin{center} \\includegraphics[width=\\textwidth]{/Users/binta/Downloads/RAPPORT DE STAGE.png} \\end{center} \\newpage
+
+# Introduction
+
+Ceci est l'introduction de mon rapport de stage.
+
+# Méthodologie
 
 ![](images/clipboard-3536274977.png)
 
