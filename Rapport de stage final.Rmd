@@ -3,23 +3,30 @@ title: "Rapport de Stage"
 author: "DIALLO Fatoumata"
 date: "`r Sys.Date()`"
 output:
-  html_document:
-    toc: true
-    fig_caption: true
-    number_sections: true
   pdf_document:
     toc: true
+    toc_depth: '6'
+  html_document:
+    toc: true
+    toc_depth: 6
+    highlight: kate
+    theme: paper
+    fig_caption: true
+    number_sections: true
+    fig_width: 8
+    fig_height: 5
+    code_folding: show
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r}
-setwd("/Users/binta/Desktop/fichiers excel stage /fichiers modifiés")
+```{r,echo = FALSE}
+setwd("/Users/binta/Desktop/Rapport de stage/Dossier GIT")
 ```
 
-```{r}
+```{r,echo=FALSE, warning=FALSE, message=FALSE}
 library(janitor)
 library(readxl)
 library(dplyr)
@@ -34,14 +41,13 @@ library(RColorBrewer)
 library(ggplot2)
 ```
 
-```{r}
+```{r, echo=FALSE, warning=FALSE,message=FALSE}
 baci <- readRDS("BACI_HS22_Y2022_V202401b.rds")
 hs_gtap <- read_xlsx("JobID-98_Concordance_H6_to_GP.xlsx")
 country_codes <- read_csv("country_codes_V202401b.csv")
 Concordance_hs_sitc3 <- read.csv("JobID-69_Concordance_HS_to_S3.CSV")
-
-
 ```
+
 ```{r}
 hs_gtap <- hs_gtap %>% rename(produit = HS.2022.Product.Code)
 Concordance_hs_sitc3 <- Concordance_hs_sitc3 %>% rename(produit = HS...Combined..Product.Code)
