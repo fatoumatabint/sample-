@@ -18,9 +18,7 @@ output:
     code_folding: show
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+![](images/clipboard-3536274977.png)
 
 ```{r,echo = FALSE}
 setwd("/Users/binta/Desktop/Rapport de stage/Dossier GIT")
@@ -48,18 +46,15 @@ country_codes <- read_csv("country_codes_V202401b.csv")
 Concordance_hs_sitc3 <- read.csv("JobID-69_Concordance_HS_to_S3.CSV")
 ```
 
-```{r}
+```{r, echo=FALSE}
 hs_gtap <- hs_gtap %>% rename(produit = HS.2022.Product.Code)
 Concordance_hs_sitc3 <- Concordance_hs_sitc3 %>% rename(produit = HS...Combined..Product.Code)
 
 ```
 
-```{r}
+```{r, echo=FALSE}
 baci_gtap_full <- full_join(baci, hs_gtap, by = "produit") %>%
   na.omit() %>%
   full_join(country_codes, by = c("exportation" = "country_code")) %>%
-  arrange(exportation)
-
+  arrange(exportation) 
 ```
-
-
